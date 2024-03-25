@@ -1,0 +1,20 @@
+#Import the necessary packages
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+#Upload the Dataset
+dataset = pd.read_csv('out.csv')
+dataset.info() #Checks the number of cols and rows
+dataset.nunique() #Returns the number of unique values in each column
+
+#Data Visualization
+#minsep_vs_PhiMembrane = sns.scatterplot(dataset, x = 'minsep',y = 'phi_membrane', hue='Deff_membrane')
+#CrowderPotential_vs_PhiMembrane = sns.scatterplot(dataset, x = 'crowder_potential',y = 'phi_membrane', hue='Deff_membrane')
+
+deff_mem = sns.histplot(dataset, x = 'Deff_membrane')
+
+#There seems to be a correlation of input features with the output
