@@ -18,3 +18,16 @@ dataset.nunique() #Returns the number of unique values in each column
 deff_mem = sns.histplot(dataset, x = 'Deff_membrane')
 
 #There seems to be a correlation of input features with the output
+
+#Define the input features and the labels
+X = dataset.iloc[:,2:7].to_numpy() #Input Features
+y = dataset.iloc[:,7].to_numpy() #Output
+
+#Split into 80% Training and 20% Testing
+X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=2, test_size=0.20, shuffle=True)
+
+#Standarize the mean=0 and variance=1
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
