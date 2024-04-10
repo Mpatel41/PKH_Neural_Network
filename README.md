@@ -5,7 +5,10 @@ PKH Neural Network Project
 
 
 ## Softwares
-
+matplotlib - Python API for plotting and data visualization
+scikit-learn - Python machine leaarning library supporting several algorithms
+tensorflow - Python machine learning library for training neural networks
+scikeras - Makes it possible to use Keras/tensorflow with scikit-learn
 
 
 ## Instructions
