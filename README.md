@@ -3,6 +3,7 @@ PKH Neural Network Project
 
 ## Introduction 
 
+The movement of treated macrophages to a tumor region impacts the efficacy of their immune response. Here, we aim to create models that predict the ability of a macrophage to infiltrate a tumor region given different environmental conditions, including physical space and chemoattraction.
 
 ## DataSet 
 
