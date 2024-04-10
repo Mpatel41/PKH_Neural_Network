@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 #Read in the Data
-dataset = pd.read_excel("out.xlsx")
+dataset = pd.read_csv("out(in).csv")
 
 #Manipulate the Dataset
 dataset['Labels'] = dataset['totflux_A_1000']
