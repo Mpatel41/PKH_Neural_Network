@@ -6,7 +6,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-
 #Read in the Data
 dataset = pd.read_csv("out(in).csv")
 
@@ -45,9 +44,8 @@ svm.fit(X_train,y_train)
 y_pred = svm.predict(X_test)
 acc_score = accuracy_score(y_test,y_pred)
 f1_score = f1_score(y_test, y_pred)
-print("The accuracy score of SVM Model is: " + acc_score) 
-print("The F1 score of the SVM Model is: " + f1_score) 
-
+print("The accuracy score of SVM Model is: " + str(acc_score)) 
+print("The F1 score of the SVM Model is: " + str(f1_score))
 
 #Confusion Matrix for true positive and true negatives
 cm = confusion_matrix(y_test,y_pred)
