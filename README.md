@@ -1,7 +1,12 @@
 # PKH_Neural_Network
 PKH Neural Network Project 
 
-###Introduction###
+## Introduction 
+
+
+## DataSet 
+
+- What are we looking at? Picture? 
 
 
 ## Softwares
@@ -20,16 +25,26 @@ On the Command Line:
 
 Git Clone - 
 
-```https://github.com/Mpatel41/PKH_Neural_Network.git```
+```python
+git clone https://github.com/Mpatel41/PKH_Neural_Network.git
+```
 
 Navigate to this directory 
 
-```cd PKH_Neural_Network```
+```python 
+cd PKH_Neural_Network
+```
+Install all the packages required to run the script 
+
+```python
+python dependencies_installation.py
+```
 
 Run the following script for one of the models - 
 
-```python SVM_Classification.py```
-
+```python
+python SVM_Classification.py
+```
 
 ## Output 
 
