@@ -44,8 +44,18 @@ python dependencies_installation.py
 Run the following script for one of the models - 
 
 ```python
-python SVM_Classification.py
+python SVM_Classification.py Classfication_Dataset.csv
 ```
+```python
+python SVM_Regression.py Regression_Dataset.csv
+```
+```python
+python Classification_Neural_Network.py Classfication_Dataset.csv
+```
+```python
+python Regression_Neural_Network.py Regression_Dataset.csv
+```
+
 
 ## Output 
 
