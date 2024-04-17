@@ -49,10 +49,12 @@ python SVM_Classification.py
 
 ## Output 
 
-Accuracy
+Accuracy -
 Applied to both the SVM and Neural Network classification models. Accuracy is used to measure the overall correctness of the model in predicting the flow of migratory cells (whether it enters the tumor region or not).
-F1 Score
+
+F1 Score -
 Applied to both the SVM and Neural Network classification models. This is useful in assessing the precision and performance of the model especially when the dataset might have a distribution imbalance.The F1 score ensures that the model is both accurately identifying the patterns of migration for the macrophages.
-Mean Squared Error
+
+Mean Squared Error -
 Applied to both the SVM and Neural Network classification models. It is useful in quantifying the magnitude of the error in prediction.
 
