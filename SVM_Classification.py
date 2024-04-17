@@ -1,24 +1,33 @@
 #SVM Classification
 
+#Import the necessary libraries
+import sys
+from sys import argv
 import pandas as pd
-import matplotlib as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import cross_val_score
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import f1_score
+import matplotlib.pyplot as plt
 
-#Read in the Data
-dataset = pd.read_csv("out(in).csv")
+#Get either the actual data or test data based on what was provided 
+if len(sys.argv) != 2:
+    print("Usage: python file.py <folder1>")
+    sys.exit(1)
 
-#Manipulate the Dataset
-dataset['Labels'] = dataset['totflux_A_1000']
-dataset.loc[dataset['Labels'] <= 0, 'Labels' ] = 0
-dataset.loc[dataset['Labels'] > 0, 'Labels' ] = 1
-classification_dataset = dataset.drop(columns=['totflux_A_1000','Deff_membrane','Unnamed: 0','job_id'])
-regression_dataset = dataset.drop(columns=['Labels','Deff_membrane','Unnamed: 0','job_id'])
+#Get the folder paths from above
+data = sys.argv[1]
+
+#Read in the File 
+dataset = pd.read_csv(data)
 
 #Define the input features and the labels for Classification Dataset
-X_class = classification_dataset.iloc[:,:5].to_numpy() #Input Features
-y_class = classification_dataset.iloc[:,5].to_numpy() #Output
+X_class = dataset.iloc[:,:5].to_numpy() #Input Features
+y_class = dataset.iloc[:,5].to_numpy() #Output
 
 #Split into Training and Testing Steps
 X_train, X_test, y_train, y_test = train_test_split(X_class,y_class, random_state=2, test_size=0.20, shuffle=True)
@@ -29,30 +38,25 @@ scaler.fit(X_train)
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 
-#SVM Classification Model
-from sklearn.svm import SVC, NuSVC
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import f1_score
-
 #SVM Model
 svm = SVC(kernel='rbf')
 svm.fit(X_train,y_train)
 
 #K-Fold Cross Validation 
-from sklearn.model_selection import cross_val_score
-scores = cross_val_score(svm, X_train, y_train, cv=10)
-print(scores)
+scores = cross_val_score(svm, X_train, y_train, cv=5)
 
 #Test the Model 
 y_pred = svm.predict(X_test)
 acc_score = accuracy_score(y_test,y_pred)
 f1_score = f1_score(y_test, y_pred)
-print("The accuracy score of SVM Model is: " + str(acc_score)) 
-print("The F1 score of the SVM Model is: " + str(f1_score))
+
+with open('Results.log','a') as f:
+  f.write('\n' + "Classification SVM Model" + '\n')
+  f.write('\n' + "The accuracy of the Classification SVM Model is: " + str(acc_score*100) +'\n')
+  f.write("The f1 score of the Classification SVM Model is: " + str(f1_score*100) + '\n')
+  f.close()
 
 #Confusion Matrix for true positive and true negatives
 cm = confusion_matrix(y_test,y_pred)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-disp.plot()
+plt.savefig('SVM_Classification_Confusion_Matrix.jpg', format='jpg')
