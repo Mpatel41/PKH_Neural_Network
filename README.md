@@ -12,12 +12,22 @@ The movement of treated macrophages to a tumor region impacts the efficacy of th
 
 ## Softwares
 matplotlib - Python API for plotting and data visualization
+https://matplotlib.org/
 
 scikit-learn - Python machine leaarning library supporting several algorithms
+https://scikit-learn.org/stable/index.html
 
 tensorflow - Python machine learning library for training neural networks
+https://www.tensorflow.org/
 
 scikeras - Makes it possible to use Keras/tensorflow with scikit-learn
+https://pypi.org/project/scikeras/
+
+keras - machine learning library
+https://keras.io/
+
+pandas - data analysis and manipulation library
+https://pandas.pydata.org/docs/user_guide/index.html
 
 
 ## Instructions
