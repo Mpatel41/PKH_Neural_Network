@@ -1,4 +1,5 @@
 import subprocess
+import os
 packages = ["matplotlib", "scikit-learn", "tensorflow", "scikeras", "keras"]
 
 for package in packages: 
