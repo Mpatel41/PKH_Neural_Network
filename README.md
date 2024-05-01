@@ -86,13 +86,21 @@ This script installs the major machine learning dependencies. If you are missing
 
 
 
-If you want to run all the scripts of Neural Network Classification, Neural Network Regression, SVM Classification, and SVM Regression, run this command on the command line 
+If you want to run all the scripts of Neural Network Classification, Neural Network Regression, SVM Classification, and SVM Regression, run these 2 commands on the command line
+
 
 ```python
-python SVM_Classification.py Classification_Dataset.csv ; python SVM_Regression.py Regression_Dataset.csv ; python Classification_Neural_Network.py Classification_Dataset.csv ; python Regression_Neural_Network.py Regression_Dataset.csv
+python SVM_Classification.py Classification_Dataset.csv ; python SVM_Regression.py Regression_Dataset.csv ; python Classification_Neural_Network.py Classification_Dataset.csv
 ```
 
 This script should run within 5 minutes
+
+**Due to some issue with the neural network script not running individually in the above code, please run this command after the previous one**
+
+```python
+python Regression_Neural_Network.py Regression_Dataset.csv
+```
+
 
 
 
