@@ -73,7 +73,7 @@ MSE_scaled = mean_squared_error(y_test,test)
 
 with open('Results.log','a') as f:
   f.write('\n' + "Regression Neural Network Model")
-  f.write('\n' + "The Mean-squared error of the Regression Neural Network Model is: " + str(MSE_scaled) +'\n')
+  f.write("The Mean-squared error of the Regression Neural Network Model is: " + str(MSE_scaled) +'\n')
   f.close()
 
 
