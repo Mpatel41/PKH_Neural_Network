@@ -72,6 +72,6 @@ score = f1_score(y_test, binary_predictions)
 
 with open('Results.log','a') as f:
   f.write('\n' + "Classification Neural Network Model" + '\n')
-  f.write('\n' + "The accuracy of the Classification Neural Network Model is: " + str(acc*100) +'\n')
+  f.write("The accuracy of the Classification Neural Network Model is: " + str(acc*100) +'\n')
   f.write("The f1 score of the Classification Neural Network Model is: " + str(score*100) + '\n')
   f.close()
