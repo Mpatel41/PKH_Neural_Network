@@ -1,0 +1,13 @@
+Classification SVM Model
+The accuracy of the Classification SVM Model is: 89.6978021978022
+The f1 score of the Classification SVM Model is: 94.26166794185157
+
+Support Vector Regression Model
+The Mean-squared error of the Regression SVM Model is: 7.832613854591903e-09
+
+Classification Neural Network Model
+The accuracy of the Classification Neural Network Model is: 86.81318681318682
+The f1 score of the Classification Neural Network Model is: 92.94117647058823
+
+Regression Neural Network Model
+The Mean-squared error of the Regression Neural Network Model is: 6.326843109023557e-09
