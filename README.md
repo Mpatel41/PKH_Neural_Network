@@ -13,12 +13,12 @@ The movement of treated macrophages to a tumor region impacts the efficacy of th
 - os
 - Subprocess
 - Sys
-- Pandas
-- Numpy
-- Scikeras
-- Keras
-- Scikit learn
-- Tensorflow
+- Pandas - 2.1.4
+- Numpy - 1.26.3
+- Scikeras -  0.13.0
+- Keras - 3.2.1
+- Scikit learn - 1.4.2
+- Tensorflow - 2.16.1
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ Install all the packages required to run the script
 ```python
 python dependencies_installation.py
 ```
-If this script gives any error when installing any dependencies, use ```pip install [dependency]```
+This script will take about 2-3 minutes to run. If this script gives any error when installing any dependencies, use ```pip install [dependency]```
 
 This script installs the major machine learning dependencies. If you are missing any other than the ones listed in this script please use ``` pip install ```
 
@@ -89,9 +89,10 @@ This script installs the major machine learning dependencies. If you are missing
 If you want to run all the scripts of Neural Network Classification, Neural Network Regression, SVM Classification, and SVM Regression, run this command on the command line 
 
 ```python
-python SVM_Classification.py Classification_Dataset.csv && python SVM_Regression.py Regression_Dataset.csv && python Classification_Neural_Network.py Classification_Dataset.csv && python Regression_Neural_Network.py Regression_Dataset.csv
+python SVM_Classification.py Classification_Dataset.csv ; python SVM_Regression.py Regression_Dataset.csv ; python Classification_Neural_Network.py Classification_Dataset.csv ; python Regression_Neural_Network.py Regression_Dataset.csv
 ```
 
+This script should run within 5 minutes
 
 
 
