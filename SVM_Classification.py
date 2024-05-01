@@ -52,11 +52,7 @@ f1_score = f1_score(y_test, y_pred)
 
 with open('Results.log','a') as f:
   f.write('\n' + "Classification SVM Model" + '\n')
-  f.write('\n' + "The accuracy of the Classification SVM Model is: " + str(acc_score*100) +'\n')
+  f.write("The accuracy of the Classification SVM Model is: " + str(acc_score*100) +'\n')
   f.write("The f1 score of the Classification SVM Model is: " + str(f1_score*100) + '\n')
   f.close()
 
-#Confusion Matrix for true positive and true negatives
-cm = confusion_matrix(y_test,y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-plt.savefig('SVM_Classification_Confusion_Matrix.jpg', format='jpg')
