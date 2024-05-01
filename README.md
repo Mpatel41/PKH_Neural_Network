@@ -49,13 +49,13 @@ dependencies_installation.py -> Install Keras, Tensorflow, Scikeras, and Scikit-
 
 preprocessing_data.py -> Data cleanup, Dropping the unwanted columns and creating labels. Outputs 2 .csv files that are the classification and regression datasets. No need to run this code as the datasets have been provided in this GitHub 
 
-Classification_Neural_Network.py -> Classification Neural Network Model that 2 hidden layers
+Classification_Neural_Network.py -> Classification Neural Network Model that 2 hidden layers. Outputs Accuracy and F1 score to Results.log
 
-Regression_Neural_Network.py -> Regression Neural Network Model that 2 hidden layers
+Regression_Neural_Network.py -> Regression Neural Network Model that 2 hidden layers. Outputs MSE score to Results.log
 
-SVM_Classification.py -> SVM Classification Model 
+SVM_Classification.py -> SVM Classification Model. Outputs Accuracy and F1 score to Results.log
 
-SVM_Regression.py -> SVM Regression Model 
+SVM_Regression.py -> SVM Regression Model. Outputs MSE score to Results.log
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ Install all the packages required to run the script
 ```python
 python dependencies_installation.py
 ```
-The dependencies_installation.py contains the dependencies of Keras, Scikeras, Tensorflow, Scikit - Learn. If this script gives any error when installing any dependencies, use ```pip install [dependency]```
+If this script gives any error when installing any dependencies, use ```pip install [dependency]```
 
 This script installs the major machine learning dependencies. If you are missing any other than the ones listed in this script please use ``` pip install ```
 
@@ -114,6 +114,7 @@ python Regression_Neural_Network.py Regression_Dataset.csv
 ## Output 
 
 **Classification Metrics**
+
 Accuracy -
 Applied to both the SVM and Neural Network classification models. Accuracy is used to measure the overall correctness of the model in predicting the flow of migratory cells (whether it enters the tumor region or not).
 
@@ -121,8 +122,11 @@ F1 Score -
 Applied to both the SVM and Neural Network classification models. This is useful in assessing the precision and performance of the model especially when the dataset might have a distribution imbalance.The F1 score ensures that the model is both accurately identifying the patterns of migration for the macrophages.
 
 **Regression Metrics**
+
 Mean Squared Error -
 Applied to both the SVM and Neural Network classification models. It is useful in quantifying the magnitude of the error in prediction.
+
+----------------
 
 **The output file is named Results.log that can be accessed in the PKH_Neural_Network Directory. It contains the accuracy and f1 scores for the Neural Network Classification and SVM classification model. Additionally, it contains the MSE score for Neural Network Regression and SVM Regression model.**
 
