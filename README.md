@@ -96,7 +96,7 @@ python SVM_Classification.py Classification_Dataset.csv ; python SVM_Regression.
 This script should run within 5 minutes
 
 
-
+---------------------------------
 
 
 
@@ -138,7 +138,7 @@ Applied to both the SVM and Neural Network classification models. It is useful i
 less -S Results.log
 ```
 
-We have provided the results in Actual_Results.log in this GitHub 
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 ## Acknowlegements
